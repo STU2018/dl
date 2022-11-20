@@ -1,7 +1,7 @@
 from mxnet import nd
 
 X = nd.arange(12).reshape((3, 4))
-print(X[1:3])
+print(X[1:3])#第一维切片
 
 X[1, 2] = 9
 print(X)
