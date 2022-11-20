@@ -1,9 +1,9 @@
 from mxnet import autograd, nd
-from mxnet.gluon import data as gdata
-from mxnet.gluon import nn
 from mxnet import init
-from mxnet.gluon import loss as gloss
 from mxnet import gluon
+from mxnet.gluon import loss as gloss
+from mxnet.gluon import nn
+from mxnet.gluon import data as gdata
 
 # 生成数据集
 num_inputs = 2
@@ -26,7 +26,7 @@ data_iter = gdata.DataLoader(dataset, batch_size, shuffle=True)
 net = nn.Sequential()
 net.add(nn.Dense(1))  # 该层输出个数为1
 
-# 初始化模型参数
+# 初始化模型参数 标准差为0.01
 net.initialize(init.Normal(sigma=0.01))
 
 # 定义损失函数
