@@ -1,5 +1,3 @@
-from IPython import display
-from matplotlib import pyplot as plt
 from mxnet import autograd, nd
 import random
 
@@ -26,8 +24,12 @@ def squared_loss(y_hat, y):
 
 # 定义优化算法
 def sgd(params, lr, batch_size):
-    for param in params:
-        param[:] = param - lr * param.grad / batch_size
+    for i in range(len(params)):
+        params[i] -= lr * params[i].grad / batch_size
+    # for i in range(len(params)):    #wrong
+    #     params[i] = params[i] - lr * params[i].grad / batch_size
+    # for param in params:           #right
+    #     param -=  lr * param.grad / batch_size  # 此处一定要防止产生新内存
 
 
 # 生成数据集
@@ -35,6 +37,7 @@ num_inputs = 2
 num_examples = 1000
 true_w = [2, -3.4]
 true_b = 4.2
+# loc  scale
 features = nd.random.normal(scale=1, shape=(num_examples, num_inputs))
 labels = true_w[0] * features[:, 0] + true_w[1] * features[:, 1] + true_b
 labels += nd.random.normal(scale=0.01, shape=labels.shape)  # 加入随机噪声
@@ -64,5 +67,14 @@ for epoch in range(num_epochs):
     train_loss = loss(net(features, w, b), labels)
     print('epoch %d,loss %f' % (epoch + 1, train_loss.mean().asnumpy()))
 
-print(true_w,w)
-print(true_b,b)
+print(true_w, w)
+print(true_b, b)
+
+# for epoch in range(num_epochs):
+#     for X, y in data_iter(batch_size, features, labels):
+#         with autograd.record():
+#             l = loss(net(X, w, b), y).mean()
+#         l.backward()
+#         sgd([w, b], lr, 1)
+#     train_loss = loss(net(features, w, b), labels)
+#     print('epoch %d,loss %f' % (epoch + 1, train_loss.mean().asnumpy()))
