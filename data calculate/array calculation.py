@@ -8,8 +8,8 @@ print(X / Y)  # 对应元素除
 print(Y.exp())  # 指数运算 nd.exp(Y)
 print(nd.dot(X, Y.T))  # 矩阵乘
 
-print(nd.concat(X, Y, dim=0))  # 行连接
-print(nd.concat(X, Y, dim=1))  # 列连接
+print(nd.concat(X, Y, dim=0))  # 原行作为新的子行
+print(nd.concat(X, Y, dim=1))  # 原列
 
 print(X == Y)  # 每个位置都有比较结果
 
