@@ -18,4 +18,5 @@ a.attach_grad()
 with autograd.record():
     c = f(a)
 c.backward()
+print(a.grad)
 print(a.grad == c / a)
