@@ -2,7 +2,7 @@ import d2lzh as d2l
 from mxnet import autograd, nd
 
 batch_size = 256
-num_epochs, lr = 1, 0.1
+num_epochs, lr = 5, 0.1
 num_inputs = 784
 num_outputs = 10
 
