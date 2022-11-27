@@ -31,6 +31,23 @@ _softmax regression.py_
 
 _easy softmax regression.py_
 
+### 激活函数 _activation function_
+_ReLU.py_
+
+_sigmod.py_
+
+_tanh.py_
+
+### 误差 _loss_
+_polynomial_fitting.py_
+
+_L2_regularization.py_
+
+_easy_L2_regularization.py_
+
+_dropout.py_
+
+_easy_dropout.py_
 
 
-资料参考：《动手深度学习（第二版）》李沐
+> 资料参考：《动手深度学习（第二版）》李沐
