@@ -50,4 +50,8 @@ _dropout.py_
 _easy_dropout.py_
 
 
+
+detail description of the project is on the way...
+
+
 > 资料参考：《动手深度学习（第二版）》李沐
