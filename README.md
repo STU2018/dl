@@ -49,9 +49,19 @@ _dropout.py_
 
 _easy_dropout.py_
 
+### 卷积神经网络 _CNN_
 
+_LeNet.py_
 
-detail description of the project is on the way...
+_AlexNet.py_
+
+_VGG.py_
+
+_NiN.py_
+
+_GoogLeNet.py_
+
+detailed description of the project is on the way...
 
 
 > 资料参考：《动手深度学习（第二版）》李沐
