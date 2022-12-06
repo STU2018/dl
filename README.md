@@ -61,6 +61,14 @@ _NiN.py_
 
 _GoogLeNet.py_
 
+_LeNet_batch_normalization.py_
+
+_LeNet_batch_normalization_easy_version.py_
+
+_ResNet.py_
+
+_DenseNet.py_
+
 detailed description of the project is on the way...
 
 
