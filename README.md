@@ -69,7 +69,16 @@ _ResNet.py_
 
 _DenseNet.py_
 
+### 循环神经网络 _RNN_
+
+_char_level_RNN.py_
+
+_easy_char_level_RNN.py_
+
+_GRU.py_
+
+_easy_GRU.py_
+
+_utils.py_
+
 detailed description of the project is on the way...
-
-
-> 资料参考：《动手深度学习（第二版）》李沐
