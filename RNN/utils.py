@@ -5,7 +5,7 @@ from mxnet.gluon import loss as gloss
 import time
 import math
 import d2lzh as d2l
-
+from mxnet.gluon import nn
 
 # 加载数据
 def load_data_jay_lyrics():
@@ -148,3 +148,19 @@ def train_and_predict_rnn(rnn, get_params, init_rnn_state, num_hiddens,
                 print(' -', predict_rnn(
                     prefix, pred_len, rnn, params, init_rnn_state,
                     num_hiddens, vocab_size, ctx, idx_to_char, char_to_idx))
+
+class RNNModel(nn.Block):
+    def __init__(self, rnn_layer, vocab_size, **kwargs):
+        super(RNNModel, self).__init__(**kwargs)
+        self.rnn = rnn_layer
+        self.vocab_size = vocab_size
+        self.dense = nn.Dense(vocab_size)
+
+    def forward(self, inputs, state):
+        X = nd.one_hot(inputs.T, self.vocab_size)
+        Y, state = self.rnn(X, state)
+        output = self.dense(Y.reshape((-1, Y.shape[-1])))
+        return output, state
+
+    def begin_state(self, *args, **kwargs):
+        return self.rnn.begin_state(*args, **kwargs)
