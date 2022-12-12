@@ -79,6 +79,10 @@ _GRU.py_
 
 _easy_GRU.py_
 
+_LSTM.py_
+
+_easy_LSTM.py_
+
 _utils.py_
 
 detailed description of the project is on the way...
