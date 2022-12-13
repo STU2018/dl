@@ -85,4 +85,18 @@ _easy_LSTM.py_
 
 _utils.py_
 
+### 优化算法 _optimization_algorithm_
+
+_batch_gradient_descent.py_
+
+_momentum_method.py_
+
+_Adam.py_
+
+_AdaGrad.py_
+
+_AdaDelta.py_
+
+_RMSProp.py_
+
 detailed description of the project is on the way...
