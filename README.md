@@ -1,4 +1,4 @@
-用 mxnet 框架实现基本的深度学习算法
+《动手深度学习·第二版》(李沐)书中部分内容的实现，采用的是mxnet框架。
 
 ### 基本数据操作 _data calculate_
 _create nd array.py_
@@ -99,4 +99,3 @@ _AdaDelta.py_
 
 _RMSProp.py_
 
-detailed description of the project is on the way...
